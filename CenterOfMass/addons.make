@@ -1,0 +1,4 @@
+ofxShader
+MSAShape3D
+ofxSimpleOpenNI
+ofxVisionCamera

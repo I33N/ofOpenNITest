@@ -24,12 +24,17 @@
 #
 # edit the following  vars to customize the makefile
 
+OPENNI_INCLUDE = -I/usr/include/ni -I/usr/include/nite 
+OPENNI_LIBS = -lXnCore
+
+CINDER_LIBS = /home/bpetit/myusr/lib/libcinder.so /home/bpetit/myusr/lib/libcinder-gl.so /home/bpetit/myusr/lib/libcinder-ip.so
+CINDER_INCLUDE = -I/home/myusr/include
 
 COMPILER_OPTIMIZATION = -march=native -mtune=native -O3
 EXCLUDE_FROM_SOURCE="bin,.xcodeproj,obj"
-USER_CFLAGS = 
+USER_CFLAGS = ${OPENNI_INCLUDE} ${CINDER_INCLUDE}
 USER_LD_FLAGS = 
-USER_LIBS = 
+USER_LIBS = ${OPENNI_LIBS} ${CINDER_LIBS}
 
 
 
