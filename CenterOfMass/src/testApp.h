@@ -2,11 +2,11 @@
 #define _TEST_APP
 
 #include "cinder/gl/gl.h"
-#include "cinder/Arcball.h"
+//#include "cinder/Arcball.h"
 //#include "cinder/MayaCamUI.h"
 
 #include "ofxSimpleOpenNI.h"
-#include "CameraPinhole.h"
+//#include "CameraPinhole.h"
 #include "ofMain.h"
 
 class testApp : public ofBaseApp{
@@ -14,8 +14,8 @@ class testApp : public ofBaseApp{
 	protected:
 		ofxSimpleOpenNI	openNI;
 		
-		ci::CameraPinhole 	camera;
-		ci::Arcball		arcball;
+		//ci::CameraPinhole 	camera;
+		//ci::Arcball		arcball;
 		//ci::MayaCamUI		cam;
 
 	public:
