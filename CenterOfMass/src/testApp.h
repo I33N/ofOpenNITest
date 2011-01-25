@@ -1,11 +1,12 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
+#include "ofxSimpleOpenNI.h"
+
 #include "cinder/gl/gl.h"
 //#include "cinder/Arcball.h"
 //#include "cinder/MayaCamUI.h"
 
-#include "ofxSimpleOpenNI.h"
 //#include "CameraPinhole.h"
 #include "ofMain.h"
 

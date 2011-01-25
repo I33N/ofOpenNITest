@@ -34,7 +34,7 @@ COMPILER_OPTIMIZATION = -march=native -mtune=native -O3
 EXCLUDE_FROM_SOURCE="bin,.xcodeproj,obj"
 USER_CFLAGS = ${OPENNI_INCLUDE} ${CINDER_INCLUDE}
 USER_LD_FLAGS = 
-USER_LIBS = ${OPENNI_LIBS} ${CINDER_LIBS}
+USER_LIBS = ${OPENNI_LIBS} ${CINDER_LIBS} -lglee
 
 
 
@@ -62,8 +62,8 @@ CORE_INCLUDES = $(shell find ../../../libs/openFrameworks/ -type d)
 CORE_INCLUDE_FLAGS = $(addprefix -I,$(CORE_INCLUDES))
 INCLUDES = $(shell find ../../../libs/*/include -type d)
 INCLUDES_FLAGS = $(addprefix -I,$(INCLUDES))
-LIB_STATIC = $(shell ls ../../../libs/*/lib/$(LIBSPATH)/*.a | grep -v openFrameworksCompiled | grep -v poco| sed "s/.*\\/lib\([^/]*\)\.a/-l\1/")
-LIB_SHARED = $(shell ls ../../../libs/*/lib/$(LIBSPATH)/*.so | grep -v openFrameworksCompiled| sed "s/.*\\/lib\([^/]*\)\.so/-l\1/")
+LIB_STATIC = $(shell ls ../../../libs/*/lib/$(LIBSPATH)/*.a | grep -v openFrameworksCompiled | grep -v poco | sed "s/.*\\/lib\([^/]*\)\.a/-l\1/")
+LIB_SHARED = $(shell ls ../../../libs/*/lib/$(LIBSPATH)/*.so | grep -v openFrameworksCompiled | sed "s/.*\\/lib\([^/]*\)\.so/-l\1/")
 LIB_STATIC += ../../../libs/poco/lib/$(LIBSPATH)/libPocoNet.a ../../../libs/poco/lib/$(LIBSPATH)/libPocoXML.a ../../../libs/poco/lib/$(LIBSPATH)/libPocoUtil.a ../../../libs/poco/lib/$(LIBSPATH)/libPocoFoundation.a 
 LIB_PATHS_FLAGS = $(shell ls -d ../../../libs/*/lib/$(LIBSPATH) | sed "s/\(\.*\)/-L\1/")
 

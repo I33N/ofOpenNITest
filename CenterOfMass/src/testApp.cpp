@@ -1,6 +1,6 @@
-#include "cinder/gl/gl.h"
-
 #include "testApp.h"
+
+#include "cinder/gl/gl.h"
 
 //--------------------------------------------------------------
 void testApp::setup(){
